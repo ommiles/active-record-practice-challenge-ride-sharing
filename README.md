@@ -4,6 +4,25 @@ For this assignment, we'll be working with a Passenger domain.
 
 We have three models: `Passenger`, `Ride`, and `Driver`.
 
+`PASSENGER`
+
+has_many :rides
+
+has_many :drivers, through: :rides
+
+
+`RIDE`
+
+belongs_to :driver
+
+belongs_to :passenger
+
+`DRIVER`
+
+has_many :rides
+
+has_many :passengers, through: :rides
+
 For our purposes, a `Passenger` has many `Ride`s, a `Driver` has many `Ride`s, and a `Ride` belongs to a `Passenger` and to an `Driver`.
 
 `Passenger` - `Driver` is a many to many relationship.
