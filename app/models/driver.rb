@@ -11,7 +11,7 @@ class Driver < ActiveRecord::Base
     end
 
     def total_income
-        self.rides.sum("price")
+        self.rides.sum(:price)
     end
 
     def cancel_ride(passenger)
