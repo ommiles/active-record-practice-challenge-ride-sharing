@@ -34,7 +34,7 @@ puts "🚗🚗🚗 Seeding rides 🚗🚗🚗..."
   driver = Driver.ids.sample
   passenger = Passenger.ids.sample
   price = rand(1..100)
-  Ride.create(driver_id: driver, passenger_id: passenger, price: price)
+  Ride.create(driver_id: driver, passenger_id: passenger, price: price, pick_up: "Here", drop_off: "There")
   # Feel free to use Faker for some fake pick up/drop off address data:
   # https://github.com/faker-ruby/faker/blob/master/doc/default/address.md
 
